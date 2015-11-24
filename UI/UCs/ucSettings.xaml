@@ -1,0 +1,185 @@
+﻿<UserControl x:Class="UI.UCs.ucSettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:UI.UCs"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:UniversalWrapPanel="using:Gregstoll"
+             d:DesignHeight="384"
+             d:DesignWidth="800">
+
+    <Grid Background="#FF59ABB4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Background="#FF3A8B8F"
+              BorderBrush="#FF0C0C0C"
+              BorderThickness="0,0,0,1"
+              VerticalAlignment="Stretch"
+              HorizontalAlignment="Stretch">
+            <!--Top content-->
+            <Grid  HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0"
+                            VerticalAlignment="Center"
+                            Orientation="Vertical"
+                            Margin="10,0,0,0">
+                    <TextBlock FontSize="30"
+                               FontWeight="Bold"
+                               FontStyle="Italic">Settings</TextBlock>
+                </StackPanel>
+
+                <Button Grid.Column="1"
+                        Name="btn" VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                        Margin="5,5,10,5" Click="btn_Click">Edit</Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1"
+              Margin="50,25,50,75">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0"
+                  BorderBrush="Black"
+                  BorderThickness="0,0,1,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="8*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"
+                      BorderBrush="Black"
+                      BorderThickness="0,0,0,1">
+                    <TextBlock HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold" FontStyle="Italic">Azure:</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1"
+                      Margin="0, 5, 0, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0"
+                          Margin="0, 30, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center">Topic name:</TextBlock>
+                        <TextBox Grid.Column="1"
+                                 Name="tbxTopicName"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Stretch"
+                                 Margin="0,0,20,0"/>
+                    </Grid>
+                    <Grid Grid.Row="1"
+                          Margin="0, 30, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center">SASKey name:</TextBlock>
+                        <TextBox Grid.Column="1"
+                                 Name="tbxSASKeyName"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Stretch"
+                                 Margin="0,0,20,0"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="2"
+                          Margin="0, 30, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center">SASKey:</TextBlock>
+                        <TextBox Grid.Column="1"
+                                 Name="tbxSASKey"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Stretch"
+                                 Margin="0,0,20,0"></TextBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1" Margin="10, 0, 0, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="8*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"
+                      BorderBrush="Black"
+                      BorderThickness="0,0,0,1">
+                    <TextBlock HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold" FontStyle="Italic">Information:</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1"
+                      Margin="10, 5, 0, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0"
+                          Margin="0, 30, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center">User name:</TextBlock>
+                        <TextBox Grid.Column="1"
+                                 Name="tbxUserName"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Stretch"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="1"
+                          Margin="0, 30, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center">Password:</TextBlock>
+                        <TextBox Grid.Column="1"
+                                 Name="tbxPassword"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Stretch"></TextBox>
+                    </Grid>
+                    <Grid Grid.Row="2"
+                          Margin="0, 30, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center">Email:</TextBlock>
+                        <TextBox Grid.Column="1" 
+                                 Name="tbxEmail"
+                                 HorizontalAlignment="Stretch"
+                                 VerticalAlignment="Stretch"></TextBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
